@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+        This HTML page shows a main page
+        with two links
+	                                                             -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			<a href="/logout">LogOut</a>
+			</div>
+		<div class='faded_div' >	
+	   <h1>Available Dog Walkers</h1> </br>
+
+		<form action="/SentCheckDogWalkers" method="post">
+            <table>
+			<tr>
+				<td>
+					<img class="insert_paw" src="images/paw2.png"><h3>Available Dog Walkers:</h3>
+					 </td>
+					<td>
+					<select name="dogwalker" >
+					<option value='None'></option>
+					{% for walker in dog_walkers %}
+
+					<option value={{walker}}> {{walker}}</option>
+					 {% endfor %}
+					 
+					</select> </td>
+					</tr> 
+			<!-- not using right now
+			
+					<tr>
+				<td>
+					<img class="insert_paw" src="images/paw2.png"><h3>Dog's Name :</h3>
+					 </td>
+					<td>
+					<select name="user_selected_dogs" >
+					{% for dog in user_dogs %}
+
+					<option value={{dog}}> {{dog}}</option>
+					 {% endfor %}
+					</select> </td>
+					</tr>       
+				-->
+				
+				<tr>
+							<td>	<h3>Or, Filter your dog walker by Days and City</h3></td>
+
+                    <td>
+					<img class="insert_paw" src="/images/paw2.png"><h3>Days:</h3>
+					</td>
+                    <td>
+						<!--The for loop runs on a list of days of the week (7 days) from python and creates a checkbox for each day -->
+						
+                            {% for day in list_of_days %}
+                            <label class="container">{{day}}
+                            <input type="checkbox" name="work_days" value="{{day}}">
+                            <span class="checkmark"></span>
+                            </label>
+							{% endfor %}
+                            </label>
+							</td>
+                </tr>
+				<tr>
+					<td class= 'form_name_cell'> City </td>
+					<!--The for loop runs on a list of days of the week (7 days) from python and creates a checkbox for each day -->
+					<td>
+					<select name="City" >
+					<option value='None'></option>
+					{% for city in list_of_cities %}
+					<option value={{city}}> {{city}}</option>
+					 {% endfor %}
+					</select> </td>
+					</tr>
+
+                <tr>
+                    <td>
+						<input type="submit" value="Send" class="important_button" >  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+</div>
+	</body>
+</html>
+
+
+		
+		

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+        This HTML page shows a main page
+        with two links
+	                                                             -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			<a href="/logout">LogOut</a>
+			</div>
+		<div class='faded_div' >	
+	   <h1>Available Dog Walkers</h1> </br>
+
+		<form action="/dogAssignedtoDogWalker" method="post">
+            <table>
+			<tr>
+				<td>
+					<h3>Available Dog Walkers:</h3>
+					 </td>
+					<td>
+					<select name="dogwalker" >
+					{% for walker in dog_walkers %}
+
+					<option value={{walker}}> {{walker}}</option>
+					 {% endfor %}
+					 
+					</select> </td>
+					</tr> 
+			
+			
+					<tr>
+				<td>
+					<h3>Dog's Name :</h3>
+					 </td>
+					<td>
+					<select name="user_selected_dog" >
+					{% for dog in user_dogs %}
+					<option value={{dog}}> {{dog}}</option>
+					 {% endfor %}
+					</select> </td>
+					</tr>       
+				
+				
+				<tr>
+
+                    <td>
+							<h3>Days:</h3>
+					</td>
+                    <td>
+						
+                          <select name="day" >
+					{% for day in list_of_days %}
+					<option value={{day}}> {{day}}</option>
+					 {% endfor %}
+					</select> 
+							</td>
+                </tr>
+			
+
+                <tr>
+                    <td>
+						<input type="submit" value="Register" class="important_button" >  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+</div>
+	</body>
+</html>
+
+
+		
+		

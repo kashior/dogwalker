@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+        This HTML page shows a main page
+        with two links
+	                                                             -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			{% if user is none %}
+			<a href="/login">LogIn/Register</a>
+			{% else %}
+			<a href="/logout">LogOut</a>
+			{% if type_user=='dogwalker' %}
+			<a href="/">Schedualed Walks</a>
+			{% else %}
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			{% endif %}
+			 {% endif  %}
+			</div>
+	   <h1>Register Here!</h1> </br>
+	<div class='faded_div' >
+	<h1>Register Here!</h1> </br>
+		<form action="/sentRegistration" method="post">
+            <table>
+
+                <tr>
+                    <td class= 'form_name_cell'>
+						Email Address
+					</td>
+                    <td>
+						<input type="email" name="mail_address" class="wider"required>
+					</td>
+                </tr>
+					<tr>
+                    <td class= 'form_name_cell'>
+						Name
+					</td>
+                    <td>
+						<input type="text" name="name" class="wider"required>
+					</td> </tr>
+					<tr>
+                    <td class= 'form_name_cell'>
+						Phone Number
+					</td>
+                    <td>
+						<label for="phone"></label>
+
+							<input type="tel" id="phone" name="phone_no1" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+							<span class="note">Format: 123-456-7890</span>
+						 <!--<input type="tell" name="phone_no1" class="wider" required> -->
+					</td>
+					</tr>
+					
+					<tr>
+                    <td class= 'form_name_cell'>
+					Additional Phone Number
+					</td>
+                    <td>
+					<label for="phone"></label>
+
+							<input type="tel" id="phone" name="phone_no2" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+							<span class="note">Format: 123-456-7890</span>
+					<!-- <input type="tell" name="phone_no2" class="wider"> -->
+					</td>
+                </tr>
+				<tr>
+					<td class= 'form_name_cell'> City </td>
+					<!--The for loop runs on a list of days of the week (7 days) from python and creates a checkbox for each day -->
+					<td>
+					<select name="City" >
+					{% for city in list_of_cities %}
+
+					<option value={{city}}> {{city}}</option>
+					 {% endfor %}
+					</select> </td>
+					</tr>
+					{% if type_user=='dogwalker' %}
+					<!--This section creates the checkbox input for the Preferred Days of the week.Multiple days can be selected -->
+                    <tr>
+                        <td class= 'form_name_cell'>
+                            <div class="move_up">
+                            <img class="insert_paw" src="image/paw2.png"><h3>Work Days:</h3>
+                            </div>
+                        </td>
+                        <td>
+						<!--The for loop runs on a list of days of the week (7 days) from python and creates a checkbox for each day -->
+						
+                            {% for day in list_of_days %}
+                            <label class="container">{{day}}
+                            <input type="checkbox" name="work_days" value="{{day}}">
+                            <span class="checkmark"></span>
+                            </label>
+							{% endfor %}
+                            </label>
+							</td>
+						</tr>
+				
+					<tr>
+                    <td class= 'form_name_cell'>
+						price for a day
+					</td>
+                    <td>
+						<input type="number" name="price" class="wider"required>
+					</td>
+                </tr>
+				
+				<tr>
+                    <td class= 'form_name_cell'>
+						Breed willing to walk
+					</td>
+					<td>
+						<!--The for loop runs on a list of days of the week (7 days) from python and creates a checkbox for each day -->		
+					
+					{% for breed in list_of_breeds %}
+                       <label class="container"> {{breed}}
+                       <input type="checkbox"  name="breed_handle" value="{{breed}}">
+                       <span class="checkmark"> </span>
+                       </label> {% endfor %}</td>
+					
+					</tr>
+					<tr>
+                    <td class= 'form_name_cell'>limit of dogs per day	</td>
+                    <td>
+					<input type="number" name="limit" class="wider"required> </td>
+					</tr>
+					{% endif %}
+                <tr>
+                    <td>
+						<input type="submit" value="Send" class="important_button">  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+		</div>
+
+	</body>
+</html>
+
+
+		
+		

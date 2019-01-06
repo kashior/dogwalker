@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<!--
+        This HTML page shows a main page
+        with two links
+		1- simple picture
+		2- chess
+
+                                                                    -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			{% if user is none %}
+			<a href="/login">LogIn/Register</a>
+			{% else %}
+			<a href="/logout">LogOut</a>
+			{% endif %}
+			{% if type_user == 1 %}
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			{% elif type_user == 2 %}
+			<a href="/logout">You are a dog walker</a>
+			{% elif type_user == 0 %}
+			<a href="/register">register</a>
+			{% endif %}
+	   </div>
+		<div class= 'faded_div'>
+             <h1>Don't have the time to walk your dog ? sign up and we'll do it for you !  </h1> </br>
+   <h2> This website will connect you and your dog with our dogwalkers</h2>
+	 <h2>You can find a dogwalker by city ,days you wish he will walk your dog and max amount of money your'e willing to pay . </h2>
+	 <h2>So what are you waiting for ? </h2>
+	 <h2>Register !  </br> </h2>
+		</div>
+		
+        </body>
+</html>
+

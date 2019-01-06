@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+        This HTML page shows a main page
+        with two links
+	                                                             -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			{% if type_user=='dogwalker' %}
+			<a href="/">Schedualed Walks</a>
+			{% else %}
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			<a href="/logout">LogOut</a>
+			{% endif %}
+			</div>
+		<div></br></br></br>
+             <h3 class= 'bigtitle'> Congrats! Thank you for choosing us! we will be more than happy to serve you!  </h3> </br>
+			 {% if type_user=='dogwalker' %}
+			<h3 class= 'bigtitle'> Now you can See the pepole registered to your schedual  </h3> </br>	
+			{% else %}
+			<h3 class= 'bigtitle'> Now you can See the available dogwalkers and register your dog  </h3> </br>	
+			
+			{% endif %}
+		</div>
+		
+        </body>
+</html>
+

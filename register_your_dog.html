@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+        This HTML page shows a main page
+        with two links
+	                                                             -->																
+<html>														
+       <head> <link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css"> </head> 	<!--read the css file-->																
+       <body>
+	   
+	   
+	   <div class='navigbar'>
+			<a href="/">Home</a>
+			<a href="/register_dog">Register your dog</a>
+			<a href="/check_dogwalkers">Available Dog Walkers </a>
+			<a href="/logout">LogOut</a>
+			</div>
+		<div class='faded_div' >	
+			
+	   <h1>Register Your Dog Here!</h1> </br>
+
+		<form action="/dog_registration" method="post">
+            <table>
+					<tr>
+                    <td>
+						  <img class="insert_paw" src="images/paw2.png"><h3>Dog's Name:</h3>
+					</td>
+                    <td>
+						<input type="text" name="name" class="wider" required>
+					</td>
+                </tr>
+
+				<tr>
+                    <td>
+					
+					<img class="insert_paw" src="images/paw2.png"><h3>Gender:</h3>
+					</td>
+                    <td>
+						<select name="gender" >
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</td>
+                </tr>
+
+				<tr>
+                    <td>
+					  <img class="insert_paw" src="images/paw2.png"><h3>Age:</h3>
+					</td>
+                    <td>
+						<input type="number" name="age" class="wider" required>
+					</td>
+                </tr>
+				<tr>
+				<td>
+					<img class="insert_paw" src="images/paw2.png"><h3>Dog's Breed :</h3>
+					 </td>
+					<td>
+					<select name="breed" >
+					{% for breed in list_of_breeds %}
+
+					<option value={{breed}}> {{breed}}</option>
+					 {% endfor %}
+					</select> </td>
+					</tr>       
+                <tr>
+                    <td>
+
+						<input type="submit" value="Send" class="important_button" >  
+					</td>
+                    <td>
+					</td>
+                </tr>
+            </table>
+        </form>
+</div>
+	</body>
+</html>
+
+
+		
+		

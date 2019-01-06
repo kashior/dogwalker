@@ -1,0 +1,80 @@
+/* ----------------------------------------------------------*/
+/* mystyle.css                                           */
+/* ------------                                              */
+/* css file for handling the display of our table and the main page design     */
+/* ----------------------------------------------------------*/
+/* Author       - Nurit Agami ,Shalev Levy ,Oriana Messika                               */
+/* Last updated - 12/12/18                                 */
+/* ----------------------------------------------------------*/
+
+/* healine style */
+h1 {color: black;background-color :rgb(255, 204, 153); text-align : center ;
+} 
+
+h3 {color :rgb(255, 204, 153)
+}
+
+/* div{background-color:white ;margin:5 px,25 px; border: 1px solid black; text-align:center ;
+ }  */
+table{ margin-left:auto; margin-right:auto; }
+
+
+
+body { height : 100% ;
+	/* background image */
+  background-image: url("https://www.simplybusiness.co.uk/media/articles/2018/01/how-to-start-a-dog-walking-business-a-guide.jpg");
+height : 100% ;width : 100% ; background-position : center-left ;background-repeat : no-repeat; background-size:center ; -webkit-background-size:cover; -moz-background-size: cover;}
+
+
+
+ /* paints the cells in black */
+td.form_name_cell {
+	font-size: 20px; ;
+}
+
+ 
+
+  /*define pixles size */
+
+td {
+	width:20px;
+	height:20px;
+}
+
+
+
+div{size : 100px }
+
+.navigbar a:hover {
+background-color:rgb(255, 204, 153) ; }
+
+
+.navigbar { 
+	background-color:#333 ;
+    overflow: hidden;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;  }
+  
+         /*sets dimensions of faded background for text*/
+.faded_div {
+    background-color: rgba(255, 255, 255,0.5);
+    margin-top: 100px;
+    margin-bottom: 1000px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-left: 30px;
+	padding-top:30px;
+	text-align: center;
+}
+  

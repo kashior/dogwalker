@@ -1,0 +1,141 @@
+/* ----------------------------------------------------------*/
+/* mystyle.css                                           */
+/* ------------                                              */
+/* css file for handling the display of our table and the main page design     */
+/* ----------------------------------------------------------*/
+/* Author       - Nurit Agami ,Shalev Levy ,Oriana Messika                               */
+/* Last updated - 12/12/18                                 */
+/* ----------------------------------------------------------*/
+
+/* healine style */
+h1 {color: black;background-color :rgb(255, 204, 153); text-align : center ;
+} 
+
+.bigtitle {font-family: Impact, Charcoal, sans-serif;
+font-size: 38px;
+letter-spacing: 0.2px;
+word-spacing: -0.8px;
+color: #1C2823;
+font-weight: 400;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+text-align : center ;
+
+}
+
+
+/*
+h3 {color :rgb(255, 204, 153)
+} */
+
+
+table{ margin-left:auto; margin-right:auto; }
+
+body { height : 100% ;
+	/* background image */
+  background-image: url("https://www.simplybusiness.co.uk/media/articles/2018/01/how-to-start-a-dog-walking-business-a-guide.jpg");
+height : 100% ;width : 99% ; background-position : center-left ;background-repeat : no-repeat; background-size:center ; -webkit-background-size:cover; -moz-background-size: cover;}
+	
+.myButton {
+	-moz-box-shadow: 7px 3px 34px 21px #fff6af;
+	-webkit-box-shadow: 7px 3px 34px 21px #fff6af;
+	box-shadow: 7px 3px 34px 21px #fff6af;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	background-color:#ffec64;
+	-moz-border-radius:33px;
+	-webkit-border-radius:33px;
+	border-radius:33px;
+	border:11px solid #26231f;
+	display:inline-block;
+	cursor:pointer;
+	color:#4f294f;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1f1e15;
+	
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+ /* paints the cells in black */
+td.form_name_cell {
+	font-size: 20px; 
+}
+
+.insert_paw{
+    float: left;
+    overflow: auto;
+    width: 20%;
+    height: auto;
+}
+
+
+  /*define pixles size */
+
+td {
+	width:20px;
+	height:20px;
+}
+
+
+
+div{size : 100px }
+
+.navigbar a:hover {
+background-color:rgb(255, 204, 153) ; }
+
+
+.navigbar { 
+	background-color:#333 ;
+    overflow: hidden;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;  }
+
+}
+  
+         /*sets dimensions of faded background for text*/
+.faded_div {
+    background-color: rgba(255, 255, 255,0.5);
+    margin-top: 100px;
+    margin-bottom: 1000px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-left: 30px;
+	padding-top:30px;
+	text-align: center;
+}
+  
